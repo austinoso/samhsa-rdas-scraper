@@ -1,0 +1,16 @@
+{
+  "name": "rdas.samhsa.gov-scraper",
+  "version": "0.1.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
+  },
+  "author": "Austin Osorio",
+  "license": "MIT",
+  "dependencies": {
+    "csv-writer": "^1.6.0",
+    "node-fetch": "^2.6.1"
+  }
+}
