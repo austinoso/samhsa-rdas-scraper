@@ -1,5 +1,16 @@
 const createCsvWriter = require("csv-writer").createObjectCsvWriter;
 
+function createDirName(eRow) {
+  const { row, column, control } = eRow;
+
+  let dirName = row;
+
+  if (column) dirName += ` x ${column}`;
+  if (control) dirName += ` x ${control}`;
+
+  return dirName;
+}
+
 //returns api cell data in a format best for CSV
 function getDataFromCells(apiData) {
   const data = [];
@@ -42,6 +53,7 @@ function getDataFromCells(apiData) {
       columnPercentSE: cell.column.standard_error,
       columnPercentLower: cell.column.confidence_interval[0],
       columnPercentUpper: cell.column.confidence_interval[1],
+      year: apiData.year,
     };
 
     data.push(dataFromCell);
@@ -54,20 +66,21 @@ function getDataFromCells(apiData) {
 function getHeaders(apiData) {
   const headers = [
     { id: "row", title: apiData.row.title },
-    { id: "totalPercent", title: "Total %" },
-    { id: "totalPercentSE", title: "Total % SE" },
-    { id: "totalPercentCILower", title: "Total % CI (lower)" },
-    { id: "totalPercentCIUpper", title: "Total % CI (upper)" },
-    { id: "rowPercent", title: "Row %" },
-    { id: "rowPercentSE", title: "Row % SE" },
-    { id: "rowPercentLower", title: "Row % CI (lower)" },
-    { id: "rowPercentUpper", title: "Row % CI (upper)" },
-    { id: "columnPercent", title: "Column %" },
-    { id: "columnPercentSE", title: "Column % SE" },
-    { id: "columnPercentLower", title: "Column % CI (lower)" },
-    { id: "columnPercentUpper", title: "Column % CI (upper)" },
-    { id: "wCount", title: "Weighted Count" },
-    { id: "countSE", title: "Count SE" },
+    { id: "totalPercent", title: "totalPercent" },
+    { id: "totalPercentSE", title: "totalPercentSE" },
+    { id: "totalPercentCILower", title: "totalPercentCILower" },
+    { id: "totalPercentCIUpper", title: "totalPercentCIUpper" },
+    { id: "rowPercent", title: "rowPercent" },
+    { id: "rowPercentSE", title: "rowPercentSE" },
+    { id: "rowPercentLower", title: "rowPercentLower" },
+    { id: "rowPercentUpper", title: "rowPercentUpper" },
+    { id: "columnPercent", title: "columnPercent" },
+    { id: "columnPercentSE", title: "columnPercentSE" },
+    { id: "columnPercentLower", title: "columnPercentLower" },
+    { id: "columnPercentUpper", title: "columnPercentUpper" },
+    { id: "wCount", title: "wCount" },
+    { id: "countSE", title: "countSE" },
+    { id: "year", title: "yearRange" },
   ];
 
   if (apiData.column)
@@ -78,16 +91,17 @@ function getHeaders(apiData) {
   return headers;
 }
 
-function createCSV(filename = "out.csv", apiData) {
+function createCSV(filePath = "./out.csv", inData) {
   const csvWriter = createCsvWriter({
-    path: filename,
-    header: getHeaders(apiData),
+    path: filePath,
+    header: getHeaders(inData),
   });
 
-  const data = getDataFromCells(apiData);
+  const data = getDataFromCells(inData);
   csvWriter.writeRecords(data).then(() => console.log("Done"));
 }
 
 module.exports = {
   createCSV,
+  createDirName,
 };

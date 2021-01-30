@@ -5,6 +5,8 @@ async function getCrosstabFromLink(link) {
   const res = await fetch(link);
   const data = await res.json();
 
+  if (data.errorCode) return data;
+
   return data.results;
 }
 
