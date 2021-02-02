@@ -4,11 +4,11 @@ Scraper built in NodeJS for SAMHSA's Restricted-use Data Analysis System. Create
 
 ## Setup Instructions
 
-1.  Clone or [download](https://github.com/austinoso/samhsa-rdas-scraper/archive/main.zip) this repo.
+1.  Clone or [download](https://github.com/austinoso/samhsa-rdas-scraper/archive/main.zip) this repo
 
 2.  Extract the files to a location of your choice
 
-3.  Install the latest version of [node](https://nodejs.org/en/download/).
+3.  Install the latest version of [node](https://nodejs.org/en/download/)
 
 4.  In Windows, search for 'cmd' to find command prompt, if in Mac OS, search for your terminal
 
@@ -22,7 +22,7 @@ Scraper built in NodeJS for SAMHSA's Restricted-use Data Analysis System. Create
 
 ### 1. The in.csv
 
-The in.csv file should contain the input variables for each call to the API.
+The in.csv file should contain the input variables for each call to the API
 
 - Data Years: The 2-Year data set you're targeting
 - Row Variable: The key row variable
@@ -32,9 +32,9 @@ The in.csv file should contain the input variables for each call to the API.
 
 ### 2. Execution
 
-To execute the program run `node main.js` or with npm `npm start`.
+To execute the program run `node main.js` in command prompt / terminal or with npm `npm start`
 
-You can also create a .bat file `<FILENAME HERE>.bat` and paste either of those commands as an easier single-click method of executing the code.
+You can also create a .bat file `<FILENAME HERE>.bat` and paste either of those commands as an easier single-click method of executing the code
 
 ## Contributors
 
