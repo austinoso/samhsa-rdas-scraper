@@ -1,14 +1,14 @@
 # SAMHSA Restricted-use Data Analysis System Scraper
 
-Scraper built in NodeJS for SAMHSA's Restricted-use Data Analysis System. Created as an easier
+Scraper built in NodeJS for SAMHSA's Restricted-use Data Analysis System. Created as an easier method of obtaining data opposed to running a crosstab.
 
 ## Setup Instructions
 
-### 1. Clone or [download](https://github.com/austinoso/samhsa-rdas-scraper/archive/main.zip) this repo.
+1.  Clone or [download](https://github.com/austinoso/samhsa-rdas-scraper/archive/main.zip) this repo.
 
-### 2. Install the latest version of [node](https://nodejs.org/en/download/).
+2.  Install the latest version of [node](https://nodejs.org/en/download/).
 
-### 3. Run `npm install` in your terminal to install all dependencies
+3.  Run `npm install` in your terminal to install all dependencies
 
 ---
 
