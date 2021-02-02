@@ -4,12 +4,6 @@ const { createCSV, createDirName } = require("./utils/createCSV");
 const { readCSV } = require("./utils/readCSV");
 const { getAPILink, buildFilter } = require("./utils/makeAPILink");
 
-const link =
-  "https://rdas.samhsa.gov/api/surveys/NSDUH-2008-2009-RD02YR/crosstab/?column=AGE&control=ELGMJ_B&filter=AGE%3D18%2C19%26ELGMJ_B%3D1&format=json&row=RECMJ_B&run_chisq=false&weight=DASWT_1";
-
-const link2 =
-  "https://rdas.samhsa.gov/api/surveys/NSDUH-2008-2009-RD02YR/crosstab/?column=PINC2&format=json&row=ALCEVER&run_chisq=false&weight=DASWT_1";
-
 async function main() {
   const csvData = await readCSV();
 

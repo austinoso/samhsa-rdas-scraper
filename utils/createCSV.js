@@ -65,7 +65,7 @@ function getDataFromCells(apiData) {
 // Returns headers for CSV using api titles
 function getHeaders(apiData) {
   const headers = [
-    { id: "row", title: apiData.row.title },
+    { id: "row", title: apiData.row.key },
     { id: "totalPercent", title: "totalPercent" },
     { id: "totalPercentSE", title: "totalPercentSE" },
     { id: "totalPercentCILower", title: "totalPercentCILower" },
@@ -84,9 +84,9 @@ function getHeaders(apiData) {
   ];
 
   if (apiData.column)
-    headers.unshift({ id: "column", title: apiData.column.title });
+    headers.unshift({ id: "column", title: apiData.column.key });
   if (apiData.control)
-    headers.unshift({ id: "control", title: apiData.control.title });
+    headers.unshift({ id: "control", title: apiData.control.key });
 
   return headers;
 }
@@ -98,7 +98,9 @@ function createCSV(filePath = "./out.csv", inData) {
   });
 
   const data = getDataFromCells(inData);
-  csvWriter.writeRecords(data).then(() => console.log("Done"));
+  csvWriter
+    .writeRecords(data)
+    .then(() => console.log(`Created .csv at ${filePath}`));
 }
 
 module.exports = {
