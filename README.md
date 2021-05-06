@@ -8,7 +8,7 @@ Scraper built in NodeJS for SAMHSA's Restricted-use Data Analysis System. Create
 
 2.  Install the latest version of [node](https://nodejs.org/en/download/).
 
-3.  Direct Command Prompt to the nodejs folder you just installed by typing 'cd C:\Program Files (x86)\nodejs' into command prompt, and press enter.  
+3.  Direct Command Prompt to the nodejs folder you just installed by typing 'cd C:\Program Files (x86)\nodejs' (or the file path where you installed nodejs) into command prompt, and press enter.  
 
 3.  Once Command Prompt is directed to the nodejs folder, type `npm install` in your terminal and press enter to install all dependencies
 
