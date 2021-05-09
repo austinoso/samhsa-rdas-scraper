@@ -14,7 +14,7 @@ Scraper built in NodeJS for SAMHSA's Restricted-use Data Analysis System. Create
 
 5.  In command prompt type 'cd <filepath where you extracted the package>, and press enter
 
-3.  After the correct filepath is selected, type `npm install` and press enter to install all dependencies
+6.  After the correct filepath is selected, type `npm install` and press enter to install all dependencies
 
 ---
 
@@ -35,6 +35,14 @@ The in.csv file should contain the input variables for each call to the API
 To execute the program run `node main.js` in command prompt / terminal or with npm `npm start`
 
 You can also create a .bat file `<FILENAME HERE>.bat` and paste either of those commands as an easier single-click method of executing the code
+
+## Troubleshooting
+
+For help understanding console commands in Windows: https://www.digitaltrends.com/computing/how-to-use-command-prompt/
+
+For help completing these steps in a macOS: https://macpaw.com/how-to/use-terminal-on-mac
+
+For help troubleshooting issues with NodeJS: https://nodejs.dev/learn/run-nodejs-scripts-from-the-command-line
 
 ## Contributors
 
