@@ -12,7 +12,7 @@ Scraper built in NodeJS for SAMHSA's Restricted-use Data Analysis System. Create
 
 4.  In Windows, search for 'cmd' to find command prompt, if in Mac OS, search for your terminal
 
-5.  In command prompt type 'cd <filepath where you extracted the package>, and press enter
+5.  In command prompt type `cd <FILEPATH OF EXTRACTED FILES HERE>`, and press enter
 
 6.  After the correct filepath is selected, type `npm install` and press enter to install all dependencies
 
